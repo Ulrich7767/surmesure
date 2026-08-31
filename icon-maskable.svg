@@ -1,0 +1,34 @@
+<!-- Variante masquable : Android peut y découper un cercle, un squircle ou une
+     goutte. Le fond va donc bord à bord, et la marque est resserrée dans les
+     80 % du centre — la zone qu'aucun découpage n'entame. Le trait du fil est
+     encore épaissi, la réduction étant plus forte ici. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="metalM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8A6420"/>
+      <stop offset="0.34" stop-color="#E8C97A"/>
+      <stop offset="0.52" stop-color="#B8862D"/>
+      <stop offset="1" stop-color="#8A6420"/>
+    </linearGradient>
+    <clipPath id="chasM">
+      <ellipse cx="528" cy="252" rx="15" ry="52" transform="rotate(-14 528 252)"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1024" height="1024" fill="#15120F"/>
+
+  <g transform="translate(512 512) scale(0.76) translate(-512 -512)">
+    <path d="M291 508 C288 420 318 332 384 276 C438 230 478 206 516 236 C552 264 570 306 606 330 C630 346 652 342 664 322 C676 302 668 276 650 272 C632 268 622 288 634 300 C652 318 700 296 762 246 C796 218 822 200 846 190"
+          fill="none" stroke="#D71920" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M532 189 C519 206 512 242 507 288 L370 841 L376 846 L383 832 L549 288 C549 242 553 206 552 189 C548 178 536 178 532 189 Z"
+          fill="url(#metalM)"/>
+
+    <ellipse cx="528" cy="252" rx="15" ry="52" transform="rotate(-14 528 252)" fill="#15120F"/>
+
+    <g clip-path="url(#chasM)">
+      <path d="M291 508 C288 420 318 332 384 276 C438 230 478 206 516 236 C552 264 570 306 606 330 C630 346 652 342 664 322 C676 302 668 276 650 272 C632 268 622 288 634 300 C652 318 700 296 762 246 C796 218 822 200 846 190"
+            fill="none" stroke="#D71920" stroke-width="24" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
